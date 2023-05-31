@@ -13,10 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() })
 
 app.use(
     cors({
-        origin: [
-            "https://roshan-kumar-dobby.netlify.app/",
-            "http://localhost:5173",
-        ],
+        origin: "https://roshan-kumar-dobby.netlify.app",
         credentials: true,
     })
 )
