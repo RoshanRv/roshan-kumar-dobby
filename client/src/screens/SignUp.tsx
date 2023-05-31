@@ -10,8 +10,11 @@ const SignUp = ({}: Props) => {
     const [email, setEmail] = useState("")
     const navigate = useNavigate()
     const [err, setErr] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const handleSignUp = async () => {
+        setLoading(true)
+
         try {
             await axios.post(
                 `${"https://roshan-kumar-dobby-api.onrender.com"}/api/user`,
@@ -24,6 +27,8 @@ const SignUp = ({}: Props) => {
         } catch (e: any) {
             console.log(e)
             setErr(e.response.data)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -60,6 +65,10 @@ const SignUp = ({}: Props) => {
                     <h1 className="bg-red-700 text-white p-2 font-semibold text-center ">
                         {err}
                     </h1>
+                )}
+
+                {loading && (
+                    <div className="w-12 h-12 rounded-full border-4 border-white border-t-black animate-spin mx-auto mt-4 "></div>
                 )}
                 <button
                     onClick={handleSignUp}
