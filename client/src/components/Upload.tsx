@@ -27,9 +27,9 @@ const Upload = ({
         try {
             if (user) {
                 const img = await axios.post(
-                    `${
-                        import.meta.env.VITE_SERVER_ENDPOINT
-                    }/api/upload/${imgName}?email=${user.email}`,
+                    `${"https://roshan-kumar-dobby-api.onrender.com"}/api/upload/${imgName}?email=${
+                        user.email
+                    }`,
                     formData,
                     {
                         headers: {

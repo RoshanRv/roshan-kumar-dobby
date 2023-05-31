@@ -31,7 +31,7 @@ const Home = ({}: Props) => {
         try {
             if (user) {
                 const images = await axios.get<ImageProps[]>(
-                    `${import.meta.env.VITE_SERVER_ENDPOINT}/api/upload/${
+                    `${"https://roshan-kumar-dobby-api.onrender.com"}/api/upload/${
                         user.email
                     }`
                 )

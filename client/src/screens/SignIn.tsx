@@ -16,9 +16,7 @@ const SignIn = ({}: Props) => {
     const handleSignIn = async () => {
         try {
             const user = await axios.get(
-                `${
-                    import.meta.env.VITE_SERVER_ENDPOINT
-                }/api/user?email=${email}&password=${password}`,
+                `${"https://roshan-kumar-dobby-api.onrender.com"}/api/user?email=${email}&password=${password}`,
                 {
                     withCredentials: true,
                 }

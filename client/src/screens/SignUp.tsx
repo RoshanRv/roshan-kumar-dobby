@@ -14,7 +14,7 @@ const SignUp = ({}: Props) => {
     const handleSignUp = async () => {
         try {
             await axios.post(
-                `${import.meta.env.VITE_SERVER_ENDPOINT}/api/user`,
+                `${"https://roshan-kumar-dobby-api.onrender.com"}/api/user`,
                 { username, password, email },
                 {
                     withCredentials: true,
