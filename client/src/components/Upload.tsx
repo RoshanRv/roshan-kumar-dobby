@@ -65,6 +65,10 @@ const Upload = ({
                     placeholder="Image Name"
                 />
                 {/* file */}
+                {img && (
+                    <p className="text-black text-center">{`File Uploaded: ${img.name}`}</p>
+                )}
+
                 <input
                     type="file"
                     onChange={handleImage}
