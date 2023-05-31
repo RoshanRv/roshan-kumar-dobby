@@ -91,7 +91,7 @@ app.get("/api/upload/:email", async (req, res) => {
     }
 })
 
-app.listen(3002, () => {
+app.listen(process.env.PORT || 3002, () => {
     console.log(`Server is running at ${3002}`)
     db()
 })
