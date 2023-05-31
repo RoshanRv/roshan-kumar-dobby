@@ -1,11 +1,10 @@
 import axios from "axios"
-import React, { useState } from "react"
-import { RiH1 } from "react-icons/ri"
+import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 type Props = {}
 
-const SignUp = (props: Props) => {
+const SignUp = ({}: Props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
@@ -14,7 +13,7 @@ const SignUp = (props: Props) => {
 
     const handleSignUp = async () => {
         try {
-            const user = await axios.post(
+            await axios.post(
                 `${import.meta.env.VITE_SERVER_ENDPOINT}/api/user`,
                 { username, password, email },
                 {

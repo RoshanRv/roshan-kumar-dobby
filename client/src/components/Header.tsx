@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { IoMdLogIn } from "react-icons/io"
 import { BiLogOutCircle } from "react-icons/bi"
 import { Link } from "react-router-dom"

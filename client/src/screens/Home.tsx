@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { RiImageAddLine } from "react-icons/ri"
 import Upload from "../components/Upload"
 import useUser from "../store/useUser"
