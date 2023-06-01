@@ -64,7 +64,7 @@ const Home = ({}: Props) => {
 
     return (
         <main className="pt-24 px-10 min-h-screen w-full items-center bg-gradient-to-br from-gray-700 to-gray-900 pb-10">
-            <div className="flex justify-between mt-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-4 justify-between mt-6 items-center">
                 <h1 className="text-white font-semibold text-3xl ">
                     Your Photos
                 </h1>
@@ -90,7 +90,7 @@ const Home = ({}: Props) => {
                 )}
             </div>
             {/*    Images  */}
-            <div className="grid w-max mx-auto grid-cols-3 mt-10 gap-6">
+            <div className="grid w-max mx-auto grid-cols-1 lg:grid-cols-3 mt-10 gap-6">
                 {filteredImages &&
                     user &&
                     filteredImages.map((img, i) => {
@@ -98,7 +98,7 @@ const Home = ({}: Props) => {
                             <div key={i} className="p-3 rounded-md bg-white">
                                 <img
                                     alt="Image"
-                                    className="h-80 w-80"
+                                    className="lg:h-80 lg:w-80 w-60 h-60"
                                     src={`data:image/jpeg;base64,${Buffer.from(
                                         img.data.data
                                     ).toString("base64")}`}

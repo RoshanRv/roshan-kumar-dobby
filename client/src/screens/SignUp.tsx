@@ -35,7 +35,7 @@ const SignUp = ({}: Props) => {
     return (
         <main className="pt-24 px-10 h-screen w-full  bg-gradient-to-br from-gray-700 to-gray-900 flex justify-center items-center">
             {/* Form */}
-            <div className="bg-white shadow-xl p-5 flex flex-col gap-y-4  rounded-md lg:w-5/12 ">
+            <div className="bg-white shadow-xl p-5 flex flex-col gap-y-4 w-full rounded-md lg:w-5/12 ">
                 <h1 className="font-semibold text-3xl">SignUp</h1>
                 {/* name */}
                 <input

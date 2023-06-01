@@ -50,7 +50,7 @@ const Upload = ({
     return (
         <div className="flex justify-center h-full w-full items-center bg-black/20 backdrop-blur-sm fixed top-0 left-0">
             {/* Form */}
-            <div className="bg-white shadow-xl p-5 flex flex-col gap-y-3  rounded-md lg:w-5/12 relative">
+            <div className="bg-white shadow-xl p-5 flex flex-col gap-y-3 w-11/12 rounded-md lg:w-5/12 relative">
                 <h1 className="font-semibold text-3xl mb-4">Upload Image</h1>
                 <IoMdClose
                     onClick={() => setShowModal(false)}
